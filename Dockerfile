@@ -9,5 +9,4 @@ RUN apt-get update
 RUN apt-get -y upgrade
 RUN apt-get install -y bind9 
 ADD named.conf.options /etc/bind/named.conf.options
-USER bind
-CMD ["/usr/sbin/named","-f"]
+CMD ["/usr/sbin/named","-g"]
